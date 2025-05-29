@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-  format:
+  auto-fix:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -27,6 +27,9 @@ jobs:
         #依存関係のインストール
       - name: Install dependencies
         run: npm ci
+        #フォーマット修正
       - run: npm run format:fix
+        #lint修正
+      - run: npm run lint:fix
         #修正したコードを再コミット
       - uses: stefanzweifel/git-auto-commit-action@v5
