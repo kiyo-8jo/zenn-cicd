@@ -23,3 +23,4 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - run: npm run format:fix
+      - uses: stefanzweifel/git-auto-commit-action@v5
