@@ -22,4 +22,4 @@ jobs:
         #依存関係のインストール
       - name: Install dependencies
         run: npm ci
-      - run: npm run prettier:fix
+      - run: npm run format:fix
