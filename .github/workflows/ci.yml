@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-  prettier:
+  format:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -28,4 +28,5 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - run: npm run format:fix
+        #修正したコードを再コミット   
       - uses: stefanzweifel/git-auto-commit-action@v5
