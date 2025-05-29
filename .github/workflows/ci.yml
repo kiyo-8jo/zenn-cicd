@@ -10,6 +10,8 @@ jobs:
     strategy:
       matrix:
         node-version: ["20.x"]
+    permissions: 
+        contents: write
 
     steps:
         #リポジトリのソースを持ってくる
