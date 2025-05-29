@@ -10,11 +10,11 @@ jobs:
     strategy:
       matrix:
         node-version: ["20.x"]
-    permissions: 
-        contents: write
+    permissions:
+      contents: write
 
     steps:
-        #リポジトリのソースを持ってくる
+      #リポジトリのソースを持ってくる
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref}}
